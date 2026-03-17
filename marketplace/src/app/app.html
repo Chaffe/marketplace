@@ -1,0 +1,17 @@
+<app-header title="Hello world!" />
+
+<main class="main">
+  <h1>My Notes</h1>
+
+    <ul>
+        <li *ngFor="let note of notes()">
+          <strong>{{note.title}}</strong>
+          {{note.content}}
+          <small>{{note.createdAt}}</small>
+        </li>
+    </ul>
+</main>
+
+<app-footer (subscribeClicked)="handleSubscribe()" />
+
+<!--<router-outlet />-->
